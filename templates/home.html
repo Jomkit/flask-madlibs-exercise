@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Madlibs{% endblock %}
+
+{% block content %}
+    
+    <div class="dropdown">
+        <button onclick="toggleDropdown()" class="dropbtn">Stories</button>
+        <div id="myDropdown" class="dropdown-content">
+            {% for story in stories %}
+            <a href="/questions/{{story.name}}">{{story.name}}</a>
+            {% endfor %}
+            
+        </div>
+    </div>
+
+{% endblock %}
